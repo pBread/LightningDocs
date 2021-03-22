@@ -1,0 +1,12 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+  <div>This example shows you how to embed the ThreekitPlayer.</div>
+
+  <c:ThreekitPlayer
+    aura:id="tk-player"
+    authToken="xxx-xx-xxx"
+    assetId="xxx-xx-xxx"
+    playerHeight="500px"
+    showAR="true"
+    showConfigurator="true"
+  />
+</aura:component>

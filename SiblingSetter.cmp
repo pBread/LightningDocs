@@ -1,0 +1,22 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+  <div>
+    This example shows you how to setConfiguration from a sibling component.
+  </div>
+
+  <aura:registerEvent name="setConfig" type="TKB2B:setConfiguration" />
+
+  <div
+    onclick="{!c.fireSetConfiguration}"
+    data-attribute="Spot Color"
+    data-value="Option A"
+  >
+    Option A
+  </div>
+  <div
+    onclick="{!c.fireSetConfiguration}"
+    data-attribute="Spot Color"
+    data-value="Option B"
+  >
+    Option B
+  </div>
+</aura:component>

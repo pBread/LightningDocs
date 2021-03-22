@@ -1,0 +1,23 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+  <div style="margin-bottom: 10px">
+    This example shows you how to get Threekit's configuration and attributes
+    and set Threekit's configuration from a sibling component. It uses
+    Salesforce events which ensures the values are always up to date.
+  </div>
+
+  <div style="font-weight: bold">Values being pulled from Threekit Player</div>
+  <!-- Create a String attribute to hold the Threekit Configuraton. -->
+  <aura:attribute name="configuration" type="String" default="{}" />
+  <!-- listenGetConfiguration will be called every time the attributes change to ensure the data is updated -->
+  <aura:handler
+    action="{!c.listenGetConfiguration}"
+    event="TKB2B:getConfiguration"
+  />
+  <div>Configuration: {!v.configuration}</div>
+
+  <!-- Create a String attribute to hold the Threekit Attributes. -->
+  <aura:attribute name="attributes" type="String" default="[]" />
+  <!-- listenGetAttributes will be called every time the attributes change. -->
+  <aura:handler action="{!c.listenGetAttributes}" event="TKB2B:getAttributes" />
+  <div>Attributes: {!v.attributes}</div>
+</aura:component>

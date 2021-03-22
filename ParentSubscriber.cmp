@@ -1,0 +1,18 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+  <div>
+    This example shows you how to access the current configuration by binding an
+    attribute in a parent Lightning Component or App.
+  </div>
+
+  <aura:attribute name="localConfig" type="String" />
+  <c:ThreekitPlayer
+    aura:id="tk-player"
+    authToken="xxx-xx-xxx"
+    assetId="xxx-xx-xxx"
+    configuration="{!v.localConfig}"
+    playerHeight="500px"
+    showAR="true"
+    showConfigurator="true"
+  />
+  <div>Current Config: {!v.localConfig}</div>
+</aura:component>
